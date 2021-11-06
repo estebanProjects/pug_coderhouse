@@ -1,0 +1,70 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Formulario de productos
+        style(type="text/css").
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: #18a383;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+
+                font-size: 20px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            form {
+                width: 320px;
+                color: #999;
+                display: flex;
+                flex-direction: column;
+                padding: 30px 20px;
+                border-radius: 5px;
+
+                background-color: white;
+            }
+
+            form label {
+                margin-bottom: 5px;
+            }
+
+            .input_t {
+                outline: none;
+                padding: 5px;
+                margin-bottom: 16px;
+            }
+
+            .input_btn {
+                cursor: pointer;
+                padding: 5px 10px;
+            }
+
+            a {
+                margin-top: 15px;
+                text-decoration: none;
+            }
+
+            a:hover {
+                border-bottom: 1px solid black;
+            }  
+    body 
+        form(action='/' method='post')
+            label(for='') Nombre del producto
+            input.input_t(type='text' name='title' value='libro')
+            label(for='') Precio
+            input.input_t(type='text' name='price' value='150.73')
+            label(for='') Link de la imagen
+            input.input_t(type='text' name='thumbnail' value='https://cdn2.iconfinder.com/data/icons/flat-seo-web-ikooni/128/flat_seo2-04-512.png')
+            input.input_btn(type='submit' value='Enviar')
+        a(href='/productos') Ver todos los productos
